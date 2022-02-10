@@ -1,0 +1,54 @@
+body, html{
+  place-items:center;
+  display:grid;
+  height:100vh;
+  background:#070a5e;
+  margin: 0;
+  padding:0;
+}
+label{
+  display:flex;
+  flex-direction: column;
+  width:70px;
+  cursor:pointer;
+}
+label span{
+  background:#FFFFFF;
+  border-radius: 10px;
+  height:7px;
+  margin:7px 0;
+  transition:.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+span:nth-last-of-type(1){
+  width:90%;
+}
+span:nth-last-of-type(2){
+  width:90%;
+}
+span:nth-last-of-type(3){
+  width:90%;
+}
+span:nth-last-of-type(4){
+  width:90%;
+}
+input[type="checkbox"]{
+  display:none;
+}
+input[type="checkbox"]:checked ~ span:nth-of-type(1){
+  transform-origin:bottom,;
+transform:rotatez(45deg)translate(19px,2px)
+}
+input[type="checkbox"]:checked ~ span:nth-of-type(2){
+  transform-origin:top;
+  transform:rotatez(-45deg)translate(10px,2px);
+}
+input[type="checkbox"]:checked ~ span:nth-of-type(3){
+  transform-origin:bottom;
+  width:0%;
+transform:translate(8px,0px) rotatez(45deg);
+}
+input[type="checkbox"]:checked ~ span:nth-of-type(4){
+  transform-origin:bottom;
+  width:0%;
+transform:translate(8px,0px) rotatez(-45deg);
+}
